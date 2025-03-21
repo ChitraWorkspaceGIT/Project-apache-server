@@ -81,7 +81,7 @@ CMD ["-DFOREGROUND"]
 
 ```#sudo docker build -t dockerhubusername/imagename:latest .```
 
-#sudo docker run -itd -p 9090:80 dockerhubusername/imagename:latest
+```#sudo docker run -itd -p 9090:80 dockerhubusername/imagename:latest```
 
 ***6.Expose the apache server***
 
@@ -93,8 +93,8 @@ Paste the ipadd of httpd-server:9090
 
 ***7.Push the image to Dockerhub***
 
-#docker images
+```#docker images
 
 #sudo docker login 
 
-#docker push dockerhubusername/imagename:latest
+#docker push dockerhubusername/imagename:latest```
