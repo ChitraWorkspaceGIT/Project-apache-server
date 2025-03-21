@@ -1,8 +1,8 @@
-**###PROJECT::Apache Web Server on a Docker container**
+**PROJECT::Apache Web Server on a Docker container**
 
 
 
-#**Create an EC2 Instance**
+**1.Create an EC2 Instance**
 
 Httpd-server
 
@@ -16,7 +16,7 @@ All tcp security group
 
 8gb storage
 
-#**Connect to Mobaxterm**
+**2.Connect to Mobaxterm**
 
 Ip add of httpd-server
 
@@ -24,7 +24,7 @@ Ec2-user
 
 Select keypair
 
-###***Install Docker on Linux machine and enable it***
+***3.Install Docker on Linux machine and enable it***
 
 #sudo -i
 
@@ -40,7 +40,7 @@ Select keypair
 
 #docker version
 
-***Create a Dockerfile and html file***
+***4.Create a Dockerfile and html file***
 
 #vim dockerfile 
 
@@ -66,13 +66,13 @@ CMD ["-DFOREGROUND"]
 
 #cd..
 
-***Build the image and run the container with connector port***
+***5.Build the image and run the container with connector port***
 
 #sudo docker build -t dockerhubusername/imagename:latest .
 
 #sudo docker run -itd -p 9090:80 dockerhubusername/imagename:latest
 
-***Expose the apache server***
+***6.Expose the apache server***
 
 #curl http://ipadd of httpd-server:9090/index.html 
 
@@ -80,7 +80,7 @@ Go to chrome browser
 
 Paste the ipadd of httpd-server:9090
 
-***Push the image to Dockerhub***
+***7.Push the image to Dockerhub***
 
 #docker images
 
