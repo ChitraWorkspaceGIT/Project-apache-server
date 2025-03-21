@@ -79,7 +79,8 @@ CMD ["-DFOREGROUND"]
 
 ***5.Build the image and run the container with connector port***
 
-```#sudo docker build -t dockerhubusername/imagename:latest .
+```
+#sudo docker build -t dockerhubusername/imagename:latest .
 
 #sudo docker run -itd -p 9090:80 dockerhubusername/imagename:latest
 ```
