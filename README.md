@@ -2,29 +2,40 @@
 
 
 
-#*Create an EC2 Instance:*
+#**Create an EC2 Instance**
 
 Httpd-server
+
 Linux machine
+
 T2.micro
+
 Any key pair
+
 All tcp security group
+
 8gb storage
 
-#*Connect to Mobaxterm*
+#**Connect to Mobaxterm**
 
 Ip add of httpd-server
-Ec2-user
-Select keypair
-Connected
 
+Ec2-user
+
+Select keypair
 
 ###***Install Docker on Linux machine and enable it***
+
 #sudo -i
-# yum install docker -y
+
+#yum install docker -y
+
 #sudo sytemctl status docker
+
 #sudo systemctl start docker
+
 #sudo systemctl enable docker
+
 (here docker is active and running state)
 #docker version
 ---> Create a Dockerfile and html file
