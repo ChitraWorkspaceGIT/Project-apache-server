@@ -44,7 +44,7 @@ Select keypair
 
 #vim dockerfile 
 
-FROM ubuntu
+```FROM ubuntu
 
 RUN apt update
 
@@ -61,6 +61,7 @@ EXPOSE 80
 ENTRYPOINT ["apache2ctl"]
 
 CMD ["-DFOREGROUND"]
+```
 
 #ls
 
