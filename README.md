@@ -97,4 +97,5 @@ Paste the ipadd of httpd-server:9090
 
 #sudo docker login 
 
-#docker push dockerhubusername/imagename:latest```
+#docker push dockerhubusername/imagename:latest
+```
