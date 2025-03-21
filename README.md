@@ -2,7 +2,7 @@
 
 
 
---->Create a server :
+#*Create an EC2 Instance:*
 Httpd-server
 Linux machine
 T2.micro
