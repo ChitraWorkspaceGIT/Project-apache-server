@@ -26,6 +26,7 @@ Select keypair
 
 ***3.Install Docker on Linux machine and enable it***
 
+```
 #sudo -i
 
 #yum install docker -y
@@ -35,10 +36,11 @@ Select keypair
 #sudo systemctl start docker
 
 #sudo systemctl enable docker
+```
 
 (here docker is active and running state)
 
-#docker version
+```#docker version```
 
 ***4.Create a Dockerfile and html file***
 
@@ -77,7 +79,7 @@ CMD ["-DFOREGROUND"]
 
 ***5.Build the image and run the container with connector port***
 
-#sudo docker build -t dockerhubusername/imagename:latest .
+```#sudo docker build -t dockerhubusername/imagename:latest .```
 
 #sudo docker run -itd -p 9090:80 dockerhubusername/imagename:latest
 
