@@ -37,9 +37,13 @@ Select keypair
 #sudo systemctl enable docker
 
 (here docker is active and running state)
+
 #docker version
----> Create a Dockerfile and html file
+
+***Create a Dockerfile and html file***
+
 #vim dockerfile 
+
 FROM ubuntu
 RUN apt update
 RUN apt install apache2 -y
@@ -51,22 +55,35 @@ ENTRYPOINT ["apache2ctl"]
 CMD ["-DFOREGROUND"]
 
 #ls
+
 #sudo mkdir sourcecode
+
 #cd sourcecode
+
 #Vi index.html
+
 <h3>welcome to my world</h3>
+
 #cd..
----> Build the image and run the container with connector port
+
+***Build the image and run the container with connector port***
+
 #sudo docker build -t dockerhubusername/imagename:latest .
+
 #sudo docker run -itd -p 9090:80 dockerhubusername/imagename:latest
----> Expose the apache server
+
+***Expose the apache server***
+
 #curl http://ipadd of httpd-server:9090/index.html 
 
 Go to chrome browser
+
 Paste the ipadd of httpd-server:9090
 
----> Push the image to Dockerhub
+***Push the image to Dockerhub***
 
 #docker images
+
 #sudo docker login 
+
 #docker push dockerhubusername/imagename:latest
