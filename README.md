@@ -1,22 +1,33 @@
-**PROJECT::Apache Web Server on a Docker container**
+**🐳 Apache Web Server on Docker Container (AWS EC2 Deployment)**
 
+This project demonstrates deploying an Apache HTTP Server inside a Docker container hosted on an AWS EC2 instance. The setup includes:
 
+Building a custom Docker image with Apache
 
-**1.Create an EC2 Instance**
+Hosting a sample HTML page
 
-Httpd-server
+Exposing it on a public port
 
-Linux machine
+Pushing the image to Docker Hub
 
-T2.micro
+**🔹 Project Steps
+1️⃣ Create an EC2 Instance**
 
-Any key pair
+Type: t2.micro
 
-All tcp security group
+OS: Amazon Linux
 
-8gb storage
+Storage: 8 GB
 
-**2.Connect to Mobaxterm**
+Security Group: All TCP (for testing)
+
+Key Pair: Any existing or new key pair
+
+Name: httpd-server
+
+**2️⃣ Connect to EC2 (MobaXterm / SSH)**
+
+```ssh -i keypair.pem ec2-user@<EC2-IP>```
 
 Ip add of httpd-server
 
@@ -24,7 +35,7 @@ Ec2-user
 
 Select keypair
 
-***3.Install Docker on Linux machine and enable it***
+***3️⃣ Install & Enable Docker***
 
 ```
 #sudo -i
@@ -42,7 +53,7 @@ Select keypair
 
 ```#docker version```
 
-***4.Create a Dockerfile and html file***
+***4️⃣ Create Dockerfile & HTML***
 
 #vim dockerfile 
 
@@ -77,22 +88,22 @@ CMD ["-DFOREGROUND"]
 
 #cd..
 
-***5.Build the image and run the container with connector port***
+***5️⃣ Build the image and run the container with connector port***
 
 ```
 #sudo docker build -t dockerhubusername/imagename:latest .
 
 #sudo docker run -itd -p 9090:80 dockerhubusername/imagename:latest
 ```
-***6.Expose the apache server***
+***6️⃣ Expose the apache server***
 
-#curl http://ipadd of httpd-server:9090/index.html 
+```#curl http://ipadd of httpd-server:9090/index.html ```
 
 Go to chrome browser
 
 Paste the ipadd of httpd-server:9090
 
-***7.Push the image to Dockerhub***
+***7️⃣ Push the image to Dockerhub***
 
 ```#docker images
 
@@ -100,3 +111,12 @@ Paste the ipadd of httpd-server:9090
 
 #docker push dockerhubusername/imagename:latest
 ```
+🔹 Key Highlights
+
+✅ Apache server in Docker container hosted on AWS EC2
+
+✅ Custom image with HTML content
+
+✅ Port mapping for external access
+
+✅ Image pushed to Docker Hub
